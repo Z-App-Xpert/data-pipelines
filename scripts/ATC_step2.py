@@ -41,6 +41,9 @@ for i, row in enumerate(rows, start=1):
     if not new_code or not year:
         skipped += 1
         continue
+    
+    def clean_atc_code(x):
+        return re.sub(r"\s*\d+\)?$", "", str(x)).strip().upper()
 
     data.append({
         "previous_atc_code": prev_code,
