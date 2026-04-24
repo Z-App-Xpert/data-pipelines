@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+import re
 from bs4 import BeautifulSoup
 import os
 from datetime import date
@@ -41,7 +42,7 @@ for i, row in enumerate(rows, start=1):
     if not new_code or not year:
         skipped += 1
         continue
-    
+
     def clean_atc_code(x):
         return re.sub(r"\s*\d+\)?$", "", str(x)).strip().upper()
 
