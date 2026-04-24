@@ -47,11 +47,12 @@ for i, row in enumerate(rows, start=1):
         return re.sub(r"\s*\d+\)?$", "", str(x)).strip().upper()
 
     data.append({
-        "previous_atc_code": prev_code,
-        "substance_name": substance,
-        "new_atc_code": new_code,
-        "year_changed": year
+        "previous_atc_code": clean_atc_code(prev_code),
+        "substance_name": substance.strip(),
+        "new_atc_code": clean_atc_code(new_code),
+        "year_changed": year.strip()
     })
+
 
 df = pd.DataFrame(data)
 df.to_csv(OUT_FILE, index=False, encoding="utf-8")
