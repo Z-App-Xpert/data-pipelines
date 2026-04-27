@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 today = datetime.today().strftime("%Y-%m-%d")   
-output_dir = os.path.join(os.path.dirname(__file__), "..","output", today)
+output_dir = os.path.join(os.path.dirname(__file__), "..","scripts/output", today)
 os.makedirs(output_dir, exist_ok=True)
 file_path = os.path.join(output_dir, "latestHumanlist.xml")                        
 
