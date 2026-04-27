@@ -30,14 +30,14 @@ def main() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # Find the latest outputs from Step 1 and Step 2
-    snapshot_file = find_latest_file("WHO_ATC-DDD_Transformed_4_10_2026.csv")
+    snapshot_file = find_latest_file("WHO_ATC-DDD_2026-04-27.csv")
     alterations_file = find_latest_file("ATC_Alterations_2005_2026.csv")
 
     print(f"Using snapshot file: {snapshot_file}")
     print(f"Using alterations file: {alterations_file}")
 
     # Load Step 1 snapshot
-    df_atc = pd.read_csv(snapshot_file, dtype=str)
+    df_atc = pd.read_csv(snapshot_file, sep='\t',dtype=str,engine='python')
     df_atc.columns = [c.strip() for c in df_atc.columns]
     df_atc["atc_code"] = df_atc["atc_code"].fillna("").astype(str).str.strip().str.rstrip(")")
     expected_atc_cols = {"atc_code", "atc_name", "ddd", "uom", "adm_r", "note"}

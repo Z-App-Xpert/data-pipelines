@@ -150,7 +150,6 @@ def enrich_step3_with_fallback_dates(
     print(f"Rows updated from XML fallback: {updated_count}")
     print(f"Rows still unresolved: {unresolved_count}")
 
-
 # =========================
 # MAIN
 # =========================

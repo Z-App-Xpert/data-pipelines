@@ -13,7 +13,6 @@ from bs4 import BeautifulSoup
 # Increase recursion limit to handle deep recursion
 sys.setrecursionlimit(100000)
 
-
 def ensure_directory(dir_path: str) -> str:
     """Ensure output directory exists."""
     if not os.path.exists(dir_path):

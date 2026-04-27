@@ -53,7 +53,6 @@ for i, row in enumerate(rows, start=1):
         "year_changed": year.strip()
     })
 
-
 df = pd.DataFrame(data)
 df.to_csv(OUT_FILE, index=False, encoding="utf-8")
 
