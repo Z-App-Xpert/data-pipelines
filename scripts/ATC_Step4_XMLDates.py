@@ -7,7 +7,7 @@ from pathlib import Path
 # FILE PATHS
 # =========================
 STEP3_INPUT = Path("output/ATC_CIPHER_UPLOAD_2026.csv")
-LATEST_XML = Path("latestHumanlist.xml")
+LATEST_XML = Path("output/latestHumanlist.xml")
 OUTPUT_FILE = Path("output/step3_output_with_fallback_dates.csv")
 
 # =========================
