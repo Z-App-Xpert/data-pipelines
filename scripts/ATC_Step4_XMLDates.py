@@ -8,7 +8,7 @@ from pathlib import Path
 # =========================
 STEP3_INPUT = Path("output/ATC_CIPHER_UPLOAD_2026.csv")
 LATEST_XML = Path("output/latestHumanlist.xml")
-OUTPUT_FILE = Path("output/step3_output_with_fallback_dates.csv")
+OUTPUT_FILE = Path("output/step4_output.csv")
 
 # =========================
 # COLUMN NAMES IN STEP 3
